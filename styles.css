@@ -41,3 +41,22 @@ h1 {
     border: 1px solid #ddd;
     background-color: #fafafa;
 }
+
+/* Увеличение высоты iframe для десктопной версии */
+@media (min-width: 768px) {
+    .content iframe {
+        height: 800px;
+    }
+}
+
+/* Ограничение горизонтальной прокрутки на мобильной версии */
+@media (max-width: 767px) {
+    body, html {
+        overflow-x: hidden;
+    }
+    
+    .content iframe {
+        width: 100%;
+        height: 500px; /* Можно регулировать по необходимости */
+    }
+}
